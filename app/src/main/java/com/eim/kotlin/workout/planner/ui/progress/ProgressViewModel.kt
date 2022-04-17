@@ -1,10 +1,10 @@
-package com.eim.kotlin.workout.planner.ui.dashboard
+package com.eim.kotlin.workout.planner.ui.progress
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class ProgressViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"

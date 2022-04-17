@@ -1,4 +1,4 @@
-package com.eim.kotlin.workout.planner.ui.notifications
+package com.eim.kotlin.workout.planner.ui.objectives
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.eim.kotlin.workout.planner.databinding.FragmentNotificationsBinding
+import com.eim.kotlin.workout.planner.databinding.FragmentObjectivesBinding
 
-class NotificationsFragment : Fragment() {
+class ObjectivesFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentObjectivesBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,9 +23,9 @@ class NotificationsFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-                ViewModelProvider(this).get(NotificationsViewModel::class.java)
+                ViewModelProvider(this).get(ObjectivesViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentObjectivesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textNotifications

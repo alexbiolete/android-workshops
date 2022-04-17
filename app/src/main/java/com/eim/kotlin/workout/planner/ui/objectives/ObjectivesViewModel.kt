@@ -1,10 +1,10 @@
-package com.eim.kotlin.workout.planner.ui.notifications
+package com.eim.kotlin.workout.planner.ui.objectives
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class ObjectivesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"

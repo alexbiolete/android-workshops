@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_workouts">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.eim.kotlin.workout.planner.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_workouts"
+        android:name="com.eim.kotlin.workout.planner.ui.workouts.WorkoutsFragment"
+        android:label="@string/title_workouts"
+        tools:layout="@layout/fragment_workouts" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.eim.kotlin.workout.planner.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_progress"
+        android:name="com.eim.kotlin.workout.planner.ui.progress.ProgressFragment"
+        android:label="@string/title_progress"
+        tools:layout="@layout/fragment_progress" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.eim.kotlin.workout.planner.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_objectives"
+        android:name="com.eim.kotlin.workout.planner.ui.objectives.ObjectivesFragment"
+        android:label="@string/title_objectives"
+        tools:layout="@layout/fragment_objectives" />
 </navigation>
