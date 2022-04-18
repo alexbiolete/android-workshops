@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="9dp"
+    android:paddingBottom="64dp"
     tools:context=".ui.workouts.WorkoutsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -15,8 +14,7 @@
         app:layout_constraintBottom_toTopOf="@+id/etAddExercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etAddExercise"
