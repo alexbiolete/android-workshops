@@ -6,4 +6,14 @@
     <string name="enter_exercise">Enter exercise</string>
     <string name="add">Add</string>
     <string name="bench_press">Horizontal barbell bench press</string>
+    <string name="deadlift_pr">Deadlift PR</string>
+    <string name="enter_objective">Enter objective</string>
+    <string name="arms_day">Arms day</string>
+    <string name="what_are_you_training_today">What are you training today?</string>
+    <string name="what_is_your_next_workout">What is your next workout?</string>
+    <string name="time_placeholder">00:00:00</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="timer">Timer</string>
 </resources>

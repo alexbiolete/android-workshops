@@ -7,9 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.eim.kotlin.workout.planner.databinding.FragmentObjectivesBinding
+import com.eim.kotlin.workout.planner.ui.objectives.objective.Objective
+import com.eim.kotlin.workout.planner.ui.objectives.objective.ObjectiveAdapter
 
 class ObjectivesFragment : Fragment() {
+    private lateinit var objectiveAdapter: ObjectiveAdapter
 
     private var _binding: FragmentObjectivesBinding? = null
 
@@ -28,10 +32,20 @@ class ObjectivesFragment : Fragment() {
         _binding = FragmentObjectivesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        objectiveAdapter = ObjectiveAdapter(mutableListOf())
+
+        binding.rvObjectives.adapter = objectiveAdapter
+        binding.rvObjectives.layoutManager = LinearLayoutManager(this.context)
+
+        binding.btnAddObjective.setOnClickListener {
+            val objectiveTitle = binding.etAddObjective.text.toString()
+            if (objectiveTitle.isNotEmpty()) {
+                val objective = Objective(objectiveTitle)
+                objectiveAdapter.addObjective(objective)
+                binding.etAddObjective.text.clear()
+            }
         }
+
         return root
     }
 

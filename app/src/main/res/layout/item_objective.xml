@@ -3,25 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.progress.ProgressFragment">
+    android:layout_height="64dp"
+    android:paddingHorizontal="16dp">
 
-    <com.github.mikephil.charting.charts.RadarChart
-        android:id="@+id/rcProgress"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tvObjective"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/deadlift_pr"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cbObjective"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnTimerActivity"
+    <CheckBox
+        android:id="@+id/cbObjective"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/timer"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rcProgress" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

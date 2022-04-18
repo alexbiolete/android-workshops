@@ -4,17 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.eim.kotlin.workout.planner.databinding.FragmentWorkoutsBinding
-import com.eim.kotlin.workout.planner.ui.workouts.exercises.Exercise
-import com.eim.kotlin.workout.planner.ui.workouts.exercises.ExerciseAdapter
+import com.eim.kotlin.workout.planner.ui.workouts.workout.Workout
+import com.eim.kotlin.workout.planner.ui.workouts.workout.WorkoutAdapter
 
 class WorkoutsFragment : Fragment() {
-    private lateinit var exerciseAdapter: ExerciseAdapter
+    private lateinit var workoutAdapter: WorkoutAdapter
 
     private var _binding: FragmentWorkoutsBinding? = null
 
@@ -33,17 +31,17 @@ class WorkoutsFragment : Fragment() {
         _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        exerciseAdapter = ExerciseAdapter(mutableListOf())
+        workoutAdapter = WorkoutAdapter(mutableListOf())
 
-        binding.rvExercises.adapter = exerciseAdapter
-        binding.rvExercises.layoutManager = LinearLayoutManager(this.context)
+        binding.rvWorkouts.adapter = workoutAdapter
+        binding.rvWorkouts.layoutManager = LinearLayoutManager(this.context)
 
-        binding.btnAddExercise.setOnClickListener {
-            val exerciseTitle = binding.etAddExercise.text.toString()
-            if (exerciseTitle.isNotEmpty()) {
-                val exercise = Exercise(exerciseTitle)
-                exerciseAdapter.addExercise(exercise)
-                binding.etAddExercise.text.clear()
+        binding.btnAddWorkout.setOnClickListener {
+            val workoutTitle = binding.etAddWorkout.text.toString()
+            if (workoutTitle.isNotEmpty()) {
+                val exercise = Workout(workoutTitle)
+                workoutAdapter.addWorkout(exercise)
+                binding.etAddWorkout.text.clear()
             }
         }
 

@@ -1,4 +1,4 @@
-package com.eim.kotlin.workout.planner.ui.workouts.exercises
+package com.eim.kotlin.workout.planner.ui.workouts.exercise
 
 data class Exercise(
     val title: String,

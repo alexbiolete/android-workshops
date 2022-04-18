@@ -1,4 +1,4 @@
-package com.eim.kotlin.workout.planner.ui.workouts.exercises
+package com.eim.kotlin.workout.planner.ui.workouts.exercise
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,6 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.eim.kotlin.workout.planner.R
-import com.eim.kotlin.workout.planner.databinding.FragmentWorkoutsBinding
 import com.eim.kotlin.workout.planner.databinding.ItemExerciseBinding
 
 class ExerciseAdapter(
