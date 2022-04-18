@@ -31,7 +31,10 @@ class WorkoutsFragment : Fragment() {
         _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        workoutAdapter = WorkoutAdapter(mutableListOf())
+        val workout1 = Workout(title = "Chest + triceps + abs", isDone = true)
+        val workout2 = Workout(title = "Back + biceps + abs", isDone = false)
+
+        workoutAdapter = WorkoutAdapter(mutableListOf(workout1, workout2))
 
         binding.rvWorkouts.adapter = workoutAdapter
         binding.rvWorkouts.layoutManager = LinearLayoutManager(this.context)

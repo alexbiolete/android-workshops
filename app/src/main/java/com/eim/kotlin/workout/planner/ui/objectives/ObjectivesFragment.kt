@@ -32,7 +32,9 @@ class ObjectivesFragment : Fragment() {
         _binding = FragmentObjectivesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        objectiveAdapter = ObjectiveAdapter(mutableListOf())
+        val objective1 = Objective(title = "Improve Deadlift PR", false)
+
+        objectiveAdapter = ObjectiveAdapter(mutableListOf(objective1))
 
         binding.rvObjectives.adapter = objectiveAdapter
         binding.rvObjectives.layoutManager = LinearLayoutManager(this.context)
