@@ -2,6 +2,7 @@
 ## Biolete Alexandru-Eusebiu, 344C2
 
 ## Sources
+### https://developer.android.com/guide
 ### https://www.youtube.com/watch?v=5flXf8nuq60
 ### https://www.youtube.com/watch?v=BBWyXo-3JGQ
 ### https://www.youtube.com/watch?v=WqrpcWXBz14
