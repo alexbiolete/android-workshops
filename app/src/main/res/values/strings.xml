@@ -3,4 +3,7 @@
     <string name="title_workouts">Workouts</string>
     <string name="title_progress">Progress</string>
     <string name="title_objectives">Objectives</string>
+    <string name="enter_exercise">Enter exercise</string>
+    <string name="add">Add</string>
+    <string name="bench_press">Horizontal barbell bench press</string>
 </resources>
