@@ -1,5 +1,6 @@
 package com.eim.kotlin.workout.planner
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.eim.kotlin.workout.planner.databinding.ActivityTimerBinding
@@ -36,6 +37,11 @@ class TimerActivity : AppCompatActivity() {
         }
 
         timer.scheduleAtFixedRate(TimeTask(), 0, 500)
+
+        binding.btnMainActivity.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private inner class TimeTask: TimerTask() {
