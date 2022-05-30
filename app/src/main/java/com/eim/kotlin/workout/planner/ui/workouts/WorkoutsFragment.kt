@@ -1,6 +1,8 @@
 package com.eim.kotlin.workout.planner.ui.workouts
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +36,23 @@ class WorkoutsFragment : Fragment() {
         val root: View = binding.root
 
         val workouts: MutableList<Workout> = mutableListOf();
-        fetchFirestoreWorkouts(workouts)
+
+        val db = FirebaseFirestore.getInstance()
+        val query = db.collection("workouts")
+        val listener = query.addSnapshotListener { value, e ->
+            if (e != null) {
+                Log.w(TAG, "Listen failed.", e)
+                return@addSnapshotListener
+            }
+            for (workout in value!!) {
+                workouts.add(
+                    Workout(
+                        title = workout.data.getValue("title").toString()
+                    )
+                )
+            }
+            Log.d(TAG, "Workouts: $workouts")
+        }
 
 //        val workout1 = Workout(title = "Chest + triceps + abs", isDone = true)
 //        val workout2 = Workout(title = "Back + biceps + abs", isDone = false)
@@ -59,22 +77,5 @@ class WorkoutsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun fetchFirestoreWorkouts(workouts: MutableList<Workout>) {
-        val db = FirebaseFirestore.getInstance()
-        db.collection("workouts")
-            .get()
-            .addOnCompleteListener{
-                if (it.isSuccessful) {
-                    for (workout in it.result!!) {
-                        workouts.add(
-                            Workout(
-                                title = workout.data.getValue("title").toString()
-                            )
-                        )
-                    }
-                }
-            }
     }
 }
