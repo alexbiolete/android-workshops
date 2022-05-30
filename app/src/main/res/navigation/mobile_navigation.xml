@@ -22,4 +22,10 @@
         android:name="com.eim.kotlin.workout.planner.ui.objectives.ObjectivesFragment"
         android:label="@string/title_objectives"
         tools:layout="@layout/fragment_objectives" />
+
+    <fragment
+        android:id="@+id/navigation_articles"
+        android:name="com.eim.kotlin.workout.planner.ui.articles.ArticlesFragment"
+        android:label="Articles"
+        tools:layout="@layout/fragment_articles" />
 </navigation>

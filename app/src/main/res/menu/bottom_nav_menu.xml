@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_objectives_black_24dp"
         android:title="@string/title_objectives" />
 
+    <item
+        android:id="@+id/navigation_articles"
+        android:icon="@drawable/ic_articles_black_24dp"
+        android:title="@string/articles" />
+
 </menu>

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.248" />
+        <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable/ic_articles_black_24dp.xml" value="0.158" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.248" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.248" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable/ic_launcher_background.xml" value="0.248" />
@@ -17,6 +18,7 @@
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/activity_register.xml" value="0.2828649138712602" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/activity_timer.xml" value="0.21350861287398004" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/content_login.xml" value="0.1" />
+        <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_articles.xml" value="0.2830269345874305" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_dashboard.xml" value="0.34479166666666666" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_notifications.xml" value="0.34479166666666666" />

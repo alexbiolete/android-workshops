@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.eim.kotlin.workout.planner.databinding.FragmentWorkoutsBinding
 import com.eim.kotlin.workout.planner.ui.workouts.workout.Workout
 import com.eim.kotlin.workout.planner.ui.workouts.workout.WorkoutAdapter
+import com.google.firebase.firestore.FirebaseFirestore
 
 class WorkoutsFragment : Fragment() {
     private lateinit var workoutAdapter: WorkoutAdapter
@@ -25,16 +26,20 @@ class WorkoutsFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
+
         val workoutsViewModel =
                 ViewModelProvider(this).get(WorkoutsViewModel::class.java)
 
         _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val workout1 = Workout(title = "Chest + triceps + abs", isDone = true)
-        val workout2 = Workout(title = "Back + biceps + abs", isDone = false)
+        val workouts: MutableList<Workout> = mutableListOf();
+        fetchFirestoreWorkouts(workouts)
 
-        workoutAdapter = WorkoutAdapter(mutableListOf(workout1, workout2))
+//        val workout1 = Workout(title = "Chest + triceps + abs", isDone = true)
+//        val workout2 = Workout(title = "Back + biceps + abs", isDone = false)
+
+        workoutAdapter = WorkoutAdapter(workouts, this.requireContext())
 
         binding.rvWorkouts.adapter = workoutAdapter
         binding.rvWorkouts.layoutManager = LinearLayoutManager(this.context)
@@ -54,5 +59,22 @@ class WorkoutsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun fetchFirestoreWorkouts(workouts: MutableList<Workout>) {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("workouts")
+            .get()
+            .addOnCompleteListener{
+                if (it.isSuccessful) {
+                    for (workout in it.result!!) {
+                        workouts.add(
+                            Workout(
+                                title = workout.data.getValue("title").toString()
+                            )
+                        )
+                    }
+                }
+            }
     }
 }
