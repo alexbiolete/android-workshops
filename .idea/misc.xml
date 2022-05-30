@@ -12,13 +12,15 @@
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable/ic_progress_black_24dp.xml" value="0.248" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/drawable/ic_workouts_black_24dp.xml" value="0.248" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/activity_exercises.xml" value="0.1944696282864914" />
+        <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/activity_login.xml" value="0.26246600181323665" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/activity_timer.xml" value="0.21350861287398004" />
+        <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/content_login.xml" value="0.1" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_dashboard.xml" value="0.34479166666666666" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_notifications.xml" value="0.34479166666666666" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_objectives.xml" value="0.1" />
-        <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_progress.xml" value="0.26745240253853125" />
+        <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_progress.xml" value="0.25" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/fragment_workouts.xml" value="0.25" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/item_exercise.xml" value="0.33" />
         <entry key="..\:/git/degree/kotlin-workout-planner/app/src/main/res/layout/item_objective.xml" value="0.1" />
