@@ -47,6 +47,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+    implementation 'com.google.firebase:firebase-auth-ktx'
     // 3rd party
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 

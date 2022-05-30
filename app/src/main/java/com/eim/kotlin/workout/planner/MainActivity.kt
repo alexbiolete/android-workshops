@@ -1,5 +1,6 @@
 package com.eim.kotlin.workout.planner
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.eim.kotlin.workout.planner.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,18 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val userId = intent.getStringExtra("user_id")
+        val emailAddress = intent.getStringExtra("email_id")
+
+        binding.tvUserEmail.text = "E-mail: $emailAddress"
+
+        binding.btnLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            finish()
+        }
 
         val navView: BottomNavigationView = binding.navView
 

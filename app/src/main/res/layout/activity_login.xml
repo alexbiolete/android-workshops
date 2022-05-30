@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <FrameLayout
-        android:id="@+id/fl_header_image"
+        android:id="@+id/flHeaderImage"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,7 @@
     </FrameLayout>
     
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -43,10 +43,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fl_header_image" />
+        app:layout_constraintTop_toBottomOf="@id/flHeaderImage" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_login_email"
+        android:id="@+id/tilLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -55,10 +55,10 @@
         android:hint="@string/email_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title">
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
         <EditText
-            android:id="@+id/et_login_email"
+            android:id="@+id/etLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -67,7 +67,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_login_password"
+        android:id="@+id/tilLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,10 +76,10 @@
         android:hint="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_login_email">
+        app:layout_constraintTop_toBottomOf="@id/tilLoginEmail">
 
         <EditText
-            android:id="@+id/et_login_password"
+            android:id="@+id/etLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -88,7 +88,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -104,7 +104,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_login_password" />
+        app:layout_constraintTop_toBottomOf="@id/tilLoginPassword" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -114,10 +114,10 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login">
+        app:layout_constraintTop_toBottomOf="@id/btnLogin">
 
         <TextView
-            android:id="@+id/tv_no_account"
+            android:id="@+id/tvNoAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -125,7 +125,7 @@
             android:text="@string/don_t_have_an_account" />
 
         <TextView
-            android:id="@+id/tv_register"
+            android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

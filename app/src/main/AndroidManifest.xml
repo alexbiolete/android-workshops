@@ -12,13 +12,19 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label="@string/title_activity_login"
+            android:label="LoginActivity"
             android:theme="@style/Theme.KotlinWorkoutPlanner.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="RegisterActivity"
+            android:theme="@style/Theme.KotlinWorkoutPlanner.NoActionBar">
         </activity>
         <activity
             android:name=".TimerActivity"
